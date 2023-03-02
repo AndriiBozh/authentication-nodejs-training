@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="container container-register">
+      <div class="header">Create an account</div>
+      <form class="form registration-form" action="/registration" method="post">
+        <input
+          type="name"
+          name="username"
+          placeholder="Name"
+          value="{{name}}"
+          required
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
+        <input
+          type="password"
+          name="passwordConfirm"
+          placeholder="Confirm password"
+          required
+        />
+        <input type="email" name="email" placeholder="Email" required />
+        <p class="terms">By creating an account you agree to our
+          <a href="/terms">Terms and Conditions</a></p>
+        <button type="submit" class="form-btn register-btn">Create Account</button>
+      </form>
+      {{#if message}}
+        <div class="flash-message {{message.category}}" id="flash-msg">
+          <p class="flash-message-text">
+            {{message.text}}</p>
+          <button
+            class="close-flash-msg-btn"
+            onclick="getElementById('flash-msg').classList.add('hide')"
+          >&times;</button>
+        </div>
+      {{/if}}
+      <p class="go-to-signin-page">Have an account?
+        <a href="/login">Login</a></p>
+    </div>
+    {{! remove flash message if user doesn't do it during 8 sec }}
+    <script type="text/javascript">window.setTimeout(() => { if
+      (document.getElementById('flash-msg'))
+      document.getElementById('flash-msg').classList.add('hide');}, 8000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 7rem;
+}
+
+.container-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-btn {
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container-login {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-btn {
+  margin-right: auto;
+  margin-left: auto;
+  width: 5rem;
+  background-color: #067a06;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  border: 1px solid grey;
+  box-shadow: 3px 4px 11px 1px grey;
+  border-radius: 5px;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  row-gap: 1rem;
+}
+
+.form input {
+  height: 2rem;
+}
+
+.flash-message {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.flash-message-text {
+  letter-spacing: 1px;
+}
+
+.warning {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.hide {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.close-flash-msg-btn {
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
